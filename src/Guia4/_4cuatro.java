@@ -9,8 +9,8 @@ public class _4cuatro {
 
 		Scanner leerint = new Scanner(System.in);
 		Scanner leerstr = new Scanner(System.in);
-		int cantidad,promedio,total,contador,min,max;
-		total = contador = min = max = 0;
+		int cantidad,promedio,total,min,max;
+		total = min = max = 0;
 		
 
 		System.out.println("Ingrese cantidad de personas");
@@ -29,9 +29,7 @@ public class _4cuatro {
 		for (int i = 0; i < personas.capacity(); i++) {
 			System.out.println(
 					"La persona " + (i + 1) + " se llama " + personas.get(i) + " y tiene " + edades.get(i) + " años");
-			total += (int) edades.get(i);	
-			contador++;
-			
+						
 			if (min != 0 && max != 0) {
                 if ((int) edades.get(i) > max) {
                     max = (int) edades.get(i);
@@ -43,11 +41,11 @@ public class _4cuatro {
                 min = (int) edades.get(i);
                 max = (int) edades.get(i);
             }   
-           total = total + (int) edades.get(i);
-					
+		total = total + (int) edades.get(i);					
 		}
 		promedio = (total/ edades.size());
-		System.out.println("El cantidad de personas es"+edades.size());
+		System.out.println("El cantidad de personas es: "+edades.size());
+		System.out.println("El total es: "+total);
 		System.out.println("El promedio es: "+promedio);
 		System.out.println("El min es: "+min);
 		System.out.println("El max es: "+max);
